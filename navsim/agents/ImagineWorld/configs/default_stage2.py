@@ -27,8 +27,8 @@ class ImagineWorldConfigStage4:
     checkpoint_path = '/e2e-data/evad-tech-vla/liulin/WoTE/ckpt/freeze_stage2.ckpt'
     expert_checkpoint_path = '/e2e-data/evad-tech-vla/liulin/WoTE/ckpt/expert_imagineworld.ckpt'
     #train_stage = 'stage1'
-    #train_stage = 'stage2'
-    train_stage = 'stage4'
+    train_stage = 'stage2'
+    #train_stage = 'stage4'
 
     scorer_config: PDMScorerConfig = field(default_factory=lambda: PDMScorerConfig(
         progress_weight=5.0, ttc_weight=5.0, comfortable_weight=2.0,
