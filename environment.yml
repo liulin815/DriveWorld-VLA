@@ -1,4 +1,4 @@
-name: wote
+name: driveworld
 channels:
   - conda-forge
 dependencies:
