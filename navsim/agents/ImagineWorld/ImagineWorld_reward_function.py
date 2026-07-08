@@ -200,8 +200,8 @@ class ImagineRewardModel(nn.Module):
         # noise = torch.randn_like(latent_future_feature, dtype=latent_future_feature.dtype, device=latent_future_feature.device) * noise_std
         # latent_future_feature = latent_future_feature + noise
         # 消融实验用 jfy改 变成0
-        latent_future_feature_zero=torch.zeros_like(latent_future_feature, dtype=latent_future_feature.dtype, device=latent_future_feature.device)
-        latent_future_feature=latent_future_feature_zero
+        #latent_future_feature_zero=torch.zeros_like(latent_future_feature, dtype=latent_future_feature.dtype, device=latent_future_feature.device)
+        #latent_future_feature=latent_future_feature_zero
 
         expand_trajectory_anchors = trajectory_anchors.unsqueeze(0).repeat(bs, 1, 1, 1)
         output_trajectory = expand_trajectory_anchors + trajectory_offset
