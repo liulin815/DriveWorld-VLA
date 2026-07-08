@@ -289,9 +289,9 @@ class ImagineRewardModelSeg(nn.Module):
         latent_future_feature = latent_future_feature.reshape(bs, 16, 64, 256) # [bs, 16, 64, 256]
         
         # ---------------------------- preparetion end     -----------------------
-        noise_std = 5.0
-        noise = torch.randn_like(latent_future_feature, dtype=latent_future_feature.dtype, device=latent_future_feature.device) * noise_std
-        latent_future_feature = latent_future_feature + noise
+        #noise_std = 5.0
+        #noise = torch.randn_like(latent_future_feature, dtype=latent_future_feature.dtype, device=latent_future_feature.device) * noise_std
+        latent_future_feature = latent_future_feature #+ noise
 
 
         expand_trajectory_anchors = trajectory_anchors.unsqueeze(0).repeat(bs, 1, 1, 1)
